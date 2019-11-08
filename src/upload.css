@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Shapiro';
+    src: URL('design/Shapiro 45 Welter Extd.ttf') format('truetype');
+}
+
+body { 
+    background-color: rgb(216, 183, 135);
+    background-image: url('design/egg-shell.png');
+}
+
+.container img {
+    max-width: 800px;
+    max-height: 550px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
+
+.upload-button {
+    border: outset;
+    margin: 12px auto;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Shapiro;
+    width: 163px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    background-color: white;
+}
+
+.submit-button {
+    text-align: center; 
+    padding-top: 25px;
+}
+
+input[type=submit] {
+    border: 0;
+    width: 163px;
+    height: 35px;
+    border: outset;
+    cursor: pointer;
+    font-family: Shapiro;
+    font-size: 13px;
+    background-color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
