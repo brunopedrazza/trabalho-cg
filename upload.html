@@ -6,12 +6,14 @@
     <title>Image Upload</title>
 </head>
 <body>
-    <form action="enviado.html" id="form">
-        <input type="file" accept="image/*" onchange="loadFile(event)">
-    </form>
-    <div class="container">
+    <span class="container">
         <img id="output">
-    </div>
-    <button type="submit" form="form">Enviar</button>
+    </span>
+    <form action="enviado.html" id="form">
+        <label class="yourBtn">
+            Escolher Imagem<input type="file" accept="image/*" onchange="loadFile(event)">
+        </label>
+    </form>
+    <div id="button"></div>
 </body>
 </html>
