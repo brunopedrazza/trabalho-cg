@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Shapiro';
-    src: URL('design/Shapiro 45 Welter Extd.ttf') format('truetype');
+    src: URL('../design/Shapiro 45 Welter Extd.ttf') format('truetype');
 }
 
 body { 
     background-color: rgb(216, 183, 135);
-    background-image: url('design/egg-shell.png');
+    background-image: url('../design/egg-shell.png');
 }
 
 .container img {
