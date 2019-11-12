@@ -1,0 +1,16 @@
+body { 
+    background-color: rgb(216, 183, 135);
+    background-image: url('../design/egg-shell.png');
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}

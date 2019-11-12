@@ -9,13 +9,14 @@
 </head>
 
 <body>
-    <form action="enviado.html" id="form">
+    <form action="uploaded.html" id="form" method="get">
         <label class="upload-button" style="cursor: pointer">
-            ESCOLHER IMAGEM<input type="file" accept="image/*" onchange="loadFile(event)">
+            ESCOLHER IMAGEM<input id="inp" type="file" accept="image/*">
         </label>
+        <input id="base64" type="hidden" name="img">
     </form>
     <span class="container">
-        <img id="output">
+        <img id="img">
     </span>
     <div class="submit-button">
         <input type="submit" form="form" id="submit" value="ENVIAR">
