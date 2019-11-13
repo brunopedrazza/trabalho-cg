@@ -1,16 +1,86 @@
+@font-face {
+    font-family: 'Shapiro';
+    src: URL('../design/Shapiro 45 Welter Extd.ttf') format('truetype');
+}
+
 body { 
     background-color: rgb(216, 183, 135);
     background-image: url('../design/egg-shell.png');
 }
 
-.column {
-    float: left;
-    width: 50%;
-    padding: 5px;
+.btn {
+    border: none;
+    outline: none;
+    padding: 5px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-family: Shapiro;
+    font-size: 17px;
+    width: 7%;
 }
   
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.uploaded {
+    float: left;
+    width: 12%;
+}
+  
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.btn.all {
+    float: right;
+    width: 12%;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header-original {
+    text-align: left;
+    position: absolute;
+    padding: 20px;
+}
+
+.header-all {
+    text-align: right;
+    position: relative;
+    padding: 20px;
+}
+
+.container img {
+    max-width: 800px;
+    max-height: 550px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
+
+.submit-button {
+    text-align: center; 
+    padding-top: 25px;
+}
+
+input[type=submit] {
+    border: none;
+    outline: none;
+    padding: 6px 18px;
+    cursor: pointer;
+    font-family: Shapiro;
+    font-size: 17px;
+    background-color: #f1f1f1;
+}
+
+input[type=submit]:hover {
+    background-color: #ddd;
 }

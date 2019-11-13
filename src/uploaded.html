@@ -7,11 +7,21 @@
     <link rel="icon" href="../design/favicon.ico">
 </head>
 <body>
-    <div class="row">
-        <div class="column" id="img1"></div>
-        <div class="column" id="img2"></div>
-        <div class="column" id="img3"></div>
-        <div class="column" id="img4"></div>
+    <div class="header" id="header">
+        <button class="btn uploaded" onclick="uploaded()">ORIGINAL</button>
+        <button class="btn active" onclick="change(1)">1</button>
+        <button class="btn" onclick="change(2)">2</button>
+        <button class="btn" onclick="change(3)">3</button>
+        <button class="btn" onclick="change(4)">4</button>
+        <button class="btn all" onclick="showAll()">TODAS</button>
+    </div>
+    <span class="container">
+        <img id="img">
+    </span>
+    <div id="all"></div>
+    <div class="submit-button">
+        <form action="upload.html" id="form" method="get"></form>
+        <input type="submit" form="form" value="VOLTAR">
     </div>
 </body>
 </html>

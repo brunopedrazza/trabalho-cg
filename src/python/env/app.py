@@ -12,18 +12,25 @@ CORS(app)
 @app.route('/upload', methods=['GET'])
 def index():
     base64_string = request.args.get('img').replace(' ', '+')
+    path = '../base64_strings.txt'
 
-    image = Image.open('../pictures/cidade.jpg')
-    buffered = io.BytesIO()
-    image.save(buffered, format="JPEG")
-    img_str1 = base64.b64encode(buffered.getvalue())
+    f = open(path, 'r')
+    base64_strings = f.read()
+    f.close()
 
-    image = Image.open('../pictures/ondas.jpg')
-    buffered = io.BytesIO()
-    image.save(buffered, format="JPEG")
-    img_str2 = base64.b64encode(buffered.getvalue())
+    base64_strings = base64_strings.split(' ')
 
-    return  '{}*{}'.format(img_str1, img_str2) 
+    # image = Image.open('../pictures/cidade.jpg')
+    # buffered = io.BytesIO()
+    # image.save(buffered, format="JPEG")
+    # img_str1 = base64.b64encode(buffered.getvalue())
+
+    # image = Image.open('../pictures/ondas.jpg')
+    # buffered = io.BytesIO()
+    # image.save(buffered, format="JPEG")
+    # img_str2 = base64.b64encode(buffered.getvalue())
+
+    return  '{}*{}*{}*{}'.format(base64_strings[0], base64_strings[1], base64_strings[2], base64_strings[3])
 
 if __name__ == "__main__":
     app.run(debug=True)
