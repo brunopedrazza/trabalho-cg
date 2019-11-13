@@ -66,9 +66,13 @@ body {
     height: auto;
 }
 
+.container.all img {
+    padding: 25px
+}
+
 .submit-button {
     text-align: center; 
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 input[type=submit] {
@@ -84,3 +88,41 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #ddd;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+  }
+  .loading div {
+    width: 1rem;
+    height: 1rem;
+    margin: 2rem 0.3rem;
+    background: #ddd;
+    -webkit-animation: 0.9s bounce infinite alternate;
+            animation: 0.9s bounce infinite alternate;
+  }
+  .loading div:nth-child(2) {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .loading div:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  
+  @-webkit-keyframes bounce {
+    to {
+      opacity: 0.5;
+      -webkit-transform: translate3d(0, -1.5rem, 0);
+              transform: translate3d(0, -1.5rem, 0);
+    }
+  }
+  
+  @keyframes bounce {
+    to {
+      opacity: 0.5;
+      -webkit-transform: translate3d(0, -1.5rem, 0);
+              transform: translate3d(0, -1.5rem, 0);
+    }
+  }
+  

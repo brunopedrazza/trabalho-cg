@@ -7,6 +7,11 @@
     <link rel="icon" href="../design/favicon.ico">
 </head>
 <body>
+    <div class="loading" id="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <div class="header" id="header">
         <button class="btn uploaded" onclick="uploaded()">ORIGINAL</button>
         <button class="btn active" onclick="change(1)">1</button>
@@ -18,7 +23,7 @@
     <span class="container">
         <img id="img">
     </span>
-    <div id="all"></div>
+    <span class="container all" id="all"></span>
     <div class="submit-button">
         <form action="upload.html" id="form" method="get"></form>
         <input type="submit" form="form" value="VOLTAR">

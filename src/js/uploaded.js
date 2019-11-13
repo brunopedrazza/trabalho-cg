@@ -1,4 +1,5 @@
 onload = function(){
+    document.getElementById("header").style.display = "none";
     base64 = new URLSearchParams(window.location.search).get("img");
     image = document.getElementById("img");
 
@@ -6,12 +7,18 @@ onload = function(){
 
     var url = "http://localhost:5000/upload";
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", url + "?img=" + base64, false);
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            base64_images = xhttp.response.split('*')
+            image.src = base64_images[0];
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("header").style.display = "block";
+        }
+    };
+
+    xhttp.open("GET", url + "?img=" + base64, true);
     xhttp.send();
-
-    base64_images = xhttp.response.split('*')
-
-    image.src = base64_images[0];
 }
 
 function addHeaderEvents() {
@@ -46,9 +53,9 @@ function cleanAll() {
 function showAll() {
     var all = document.getElementById("all");
     image.src = base64;
-    base64_images.forEach(element => {
+    base64_images.forEach(img_src => {
         var img = document.createElement("img");
-        img.src = element;
+        img.src = img_src;
         all.appendChild(img);
     });
 }

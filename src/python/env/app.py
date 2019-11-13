@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 from flask_cors import CORS
+import time
 import io
 from PIL import Image
 import base64
@@ -20,15 +21,7 @@ def index():
 
     base64_strings = base64_strings.split(' ')
 
-    # image = Image.open('../pictures/cidade.jpg')
-    # buffered = io.BytesIO()
-    # image.save(buffered, format="JPEG")
-    # img_str1 = base64.b64encode(buffered.getvalue())
-
-    # image = Image.open('../pictures/ondas.jpg')
-    # buffered = io.BytesIO()
-    # image.save(buffered, format="JPEG")
-    # img_str2 = base64.b64encode(buffered.getvalue())
+    time.sleep(10)
 
     return  '{}*{}*{}*{}'.format(base64_strings[0], base64_strings[1], base64_strings[2], base64_strings[3])
 
